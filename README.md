@@ -1,7 +1,6 @@
-# Zhiying Li GitHub Page
+# My Website is Under Construction.
 
-## Software 
 
-* [Boostrap4](https://getbootstrap.com)
-* [Typora](https://www.typora.io)
+
+## To be updated soon.
 

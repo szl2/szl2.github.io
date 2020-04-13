@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title></title>
+<title>MathJax Example</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">Lorem Ipsum</div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-category">jemdoc</div>
 <div class="menu-item"><a href="download.html">download</a></div>
 <div class="menu-item"><a href="revision.html">version/bug&nbsp;info</a></div>
@@ -46,28 +46,56 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="latex.html">latex&nbsp;equations</a></div>
 <div class="menu-item"><a href="tables.html">tables</a></div>
 <div class="menu-category">Additional Features</div>
-<div class="menu-item"><a href="mathjax.html">MathJax</a></div>
+<div class="menu-item"><a href="mathjax.html" class="current">MathJax</a></div>
 <div class="menu-item"><a href="underscore.html">Underscore</a></div>
 <div class="menu-item"><a href="link.html">Link</a></div>
 <div class="menu-item"><a href="http://www.google.com" target="blank">Open&nbsp;in&nbsp;New&nbsp;Tab</a></div>
 </td>
 <td id="layout-content">
-<table class="imgtable"><tr><td>
-<img src="./images/banner.jpg" alt="profile pic" width="100%" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<table class="imgtable"><tr><td>
-<img src="./images/profile.jpg" alt="profile pic" width="200px" />&nbsp;</td>
-<td align="left"><h1>Lorem Ipsum <br /></h1>
-<p>dolor sit amet, <a href="http://www-ee.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a><br />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</td></tr></table>
-<h2>Biography</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2>Research statement</h2>
-<p>Pellentesque gravida metus purus, non blandit ligula dignissim a. Etiam vulputate nibh condimentum dui congue tempor. Vestibulum consequat non neque at tincidunt. Mauris accumsan a augue at consectetur. Praesent non nunc accumsan, feugiat nisl quis, ullamcorper est. Fusce a ex ornare libero venenatis tincidunt sed vel sem. Suspendisse id nibh at nisl pellentesque pellentesque non sit amet nisl.</p>
-<p>Cras convallis ex et felis ullamcorper, ut blandit velit efficitur. Nunc et ullamcorper lectus. Maecenas accumsan tortor volutpat dolor viverra lobortis. Duis elit justo, interdum vitae augue a, gravida lacinia nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in nulla eget magna vehicula vehicula quis id libero. Suspendisse elit sem, dignissim quis quam vitae, lacinia placerat nulla. Cras vehicula quis eros luctus condimentum. Pellentesque urna nunc, elementum ut mauris eu, pulvinar congue dui. Curabitur finibus egestas dolor vitae gravida. Integer venenatis, nisi sed iaculis tincidunt, tellus neque vehicula felis, sed viverra leo nunc at lorem. Curabitur in finibus purus. Aliquam dictum velit enim, sed vestibulum eros fringilla vitae. Donec tristique sapien dictum nisl pharetra dictum. Etiam non laoreet nisi, nec convallis quam. In commodo massa lacus, eget tincidunt odio elementum et.</p>
-<h2>Current Project</h2>
-<p>Donec tellus eros, rhoncus nec imperdiet in, tempus et mi. Quisque id feugiat enim. Suspendisse porta consequat velit, ac ullamcorper purus suscipit ac. Mauris laoreet varius urna. Suspendisse potenti. In et laoreet augue, et lobortis tellus. Etiam nec tortor tempus, lobortis turpis id, fermentum dolor. Mauris orci ante, porttitor ac viverra et, facilisis in lectus. Praesent faucibus non elit sit amet cursus. Duis eu viverra lectus, nec blandit magna. Nullam id ante semper, vestibulum neque tristique, accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis velit fermentum ex bibendum, eget molestie nisl porta.</p>
+<div id="toptitle">
+<h1>MathJax Example</h1>
+</div>
+<p>In this modified version of <tt>jemdoc</tt>, a LaTeX equation block can be typed in as</p>
+<p style="text-align:center">
+\[
+\nabla \cdot \mathbf{D} = \rho_f\\
+\nabla \cdot \mathbf{B} = 0,\\
+\nabla \times \mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} = \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\]
+</p><p>You can also align equations using LaTeX's <tt>aligned</tt> block:</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\\
+\nabla \cdot \mathbf{B} &amp;= 0\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\end{aligned}
+\]
+</p><p>To number the equation block, wrap the equations with LaTeX's <tt>equation</tt> block:</p>
+<p style="text-align:center">
+\[
+\begin{equation}
+\begin{aligned}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\\
+\nabla \cdot \mathbf{B} &amp;= 0\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\end{aligned}
+\end{equation}
+\]
+</p><p>Instead, you can use LaTeX's <tt>align</tt> (not <tt>aligned</tt>) block to number the individual equations:</p>
+<p style="text-align:center">
+\[
+\begin{align}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &amp;= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\]
+</p><p>You can also type inline equations as \(A x = b\).  Referencing equations is done as Eqs.&nbsp;\(\eqref{eq:E}\) and \(\eqref{eq:H}\).</p>
 <div id="footer">
 <div id="footer-text">
 last update of current page: 2020-04-13 00:33:03 PDT.

@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title></title>
+<title>jemdoc &ndash; running jemdoc</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -27,13 +27,13 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">Lorem Ipsum</div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-category">jemdoc</div>
 <div class="menu-item"><a href="download.html">download</a></div>
 <div class="menu-item"><a href="revision.html">version/bug&nbsp;info</a></div>
 <div class="menu-item"><a href="contact.html">contact</a></div>
 <div class="menu-category">user's guide</div>
-<div class="menu-item"><a href="using.html">running&nbsp;jemdoc</a></div>
+<div class="menu-item"><a href="using.html" class="current">running&nbsp;jemdoc</a></div>
 <div class="menu-item"><a href="example.html">example&nbsp;page</a></div>
 <div class="menu-item"><a href="cheatsheet.html">cheat&nbsp;sheet</a></div>
 <div class="menu-item"><a href="extra.html">extra&nbsp;syntax</a></div>
@@ -52,22 +52,69 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="http://www.google.com" target="blank">Open&nbsp;in&nbsp;New&nbsp;Tab</a></div>
 </td>
 <td id="layout-content">
-<table class="imgtable"><tr><td>
-<img src="./images/banner.jpg" alt="profile pic" width="100%" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<table class="imgtable"><tr><td>
-<img src="./images/profile.jpg" alt="profile pic" width="200px" />&nbsp;</td>
-<td align="left"><h1>Lorem Ipsum <br /></h1>
-<p>dolor sit amet, <a href="http://www-ee.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a><br />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</td></tr></table>
-<h2>Biography</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2>Research statement</h2>
-<p>Pellentesque gravida metus purus, non blandit ligula dignissim a. Etiam vulputate nibh condimentum dui congue tempor. Vestibulum consequat non neque at tincidunt. Mauris accumsan a augue at consectetur. Praesent non nunc accumsan, feugiat nisl quis, ullamcorper est. Fusce a ex ornare libero venenatis tincidunt sed vel sem. Suspendisse id nibh at nisl pellentesque pellentesque non sit amet nisl.</p>
-<p>Cras convallis ex et felis ullamcorper, ut blandit velit efficitur. Nunc et ullamcorper lectus. Maecenas accumsan tortor volutpat dolor viverra lobortis. Duis elit justo, interdum vitae augue a, gravida lacinia nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in nulla eget magna vehicula vehicula quis id libero. Suspendisse elit sem, dignissim quis quam vitae, lacinia placerat nulla. Cras vehicula quis eros luctus condimentum. Pellentesque urna nunc, elementum ut mauris eu, pulvinar congue dui. Curabitur finibus egestas dolor vitae gravida. Integer venenatis, nisi sed iaculis tincidunt, tellus neque vehicula felis, sed viverra leo nunc at lorem. Curabitur in finibus purus. Aliquam dictum velit enim, sed vestibulum eros fringilla vitae. Donec tristique sapien dictum nisl pharetra dictum. Etiam non laoreet nisi, nec convallis quam. In commodo massa lacus, eget tincidunt odio elementum et.</p>
-<h2>Current Project</h2>
-<p>Donec tellus eros, rhoncus nec imperdiet in, tempus et mi. Quisque id feugiat enim. Suspendisse porta consequat velit, ac ullamcorper purus suscipit ac. Mauris laoreet varius urna. Suspendisse potenti. In et laoreet augue, et lobortis tellus. Etiam nec tortor tempus, lobortis turpis id, fermentum dolor. Mauris orci ante, porttitor ac viverra et, facilisis in lectus. Praesent faucibus non elit sit amet cursus. Duis eu viverra lectus, nec blandit magna. Nullam id ante semper, vestibulum neque tristique, accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis velit fermentum ex bibendum, eget molestie nisl porta.</p>
+<div id="toptitle">
+<h1>jemdoc &ndash; running jemdoc</h1>
+</div>
+<p>Make sure
+<a href="http://www.python.org/" target=&ldquo;blank&rdquo;>Python</a> is installed, put jemdoc in your path somewhere,
+type in your file, and run</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc index.jemdoc
+</pre></div></div>
+<p>This will use a default configuration for the html elements, and create an
+<tt>index.html</tt>.</p>
+<p>Even simpler, you can omit the extension, and jemdoc will still
+process the <tt>index.jemdoc</tt> file, as in</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc index
+</pre></div></div>
+<h2>CSS</h2>
+<p>You will need to provide a <a href="http://www.w3.org/Style/CSS/" target=&ldquo;blank&rdquo;>CSS</a> file on your
+server. By default it should be called <tt>jemdoc.css</tt>. Here is an example
+<a href="dist/jemdoc.css" target=&ldquo;blank&rdquo;>jemdoc.css</a> file: download it and place it in the same
+directory as your html files. (Or customize it, or start from scratch!)</p>
+<h2>Change the configuration</h2>
+<p>To choose a different output file, use <tt>-o</tt>:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc -o html/index.html index
+</pre></div></div>
+<p>You can specify a different output directory with <tt>-o</tt>:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc -o html/ index
+</pre></div></div>
+<p>This will instead output to <tt>html/index.html</tt>.</p>
+<p>To change the html configuration (<a href="htmlchanges.html" target=&ldquo;blank&rdquo;>details here</a>), use <tt>-c</tt>:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc -c mysite.conf index
+</pre></div></div>
+<p>Command line options may be combined. For example, the following command will
+use <tt>mysite.conf</tt>, reading syntax from <tt>index.jemdoc</tt> and outputting to
+<tt>html/index.html</tt>:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc -c mysite.conf -o html/ index
+</pre></div></div>
+<h2>Other command line options</h2>
+<p>To check which version of jemdoc you are using, run the command</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc --version
+</pre></div></div>
+<p>To get simple command-line help, you can run <tt>jemdoc</tt> without arguments, or</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc --help
+</pre></div></div>
+<p>To show the html configuration (<a href="htmlchanges.html" target=&ldquo;blank&rdquo;>details here</a>), run</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc --show-config
+</pre></div></div>
 <div id="footer">
 <div id="footer-text">
 last update of current page: 2020-04-13 00:33:03 PDT.

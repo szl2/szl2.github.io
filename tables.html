@@ -5,7 +5,8 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title></title>
+<link rel="stylesheet" href="table.css" type="text/css" />
+<title>jemdoc &ndash; tables</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -27,7 +28,7 @@ MathJax.Hub.Config({
 <tr valign="top">
 <td id="layout-menu">
 <div class="menu-category">Lorem Ipsum</div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-category">jemdoc</div>
 <div class="menu-item"><a href="download.html">download</a></div>
 <div class="menu-item"><a href="revision.html">version/bug&nbsp;info</a></div>
@@ -44,7 +45,7 @@ MathJax.Hub.Config({
 <div class="menu-category">goodies</div>
 <div class="menu-item"><a href="stuff.html">vim,&nbsp;make</a></div>
 <div class="menu-item"><a href="latex.html">latex&nbsp;equations</a></div>
-<div class="menu-item"><a href="tables.html">tables</a></div>
+<div class="menu-item"><a href="tables.html" class="current">tables</a></div>
 <div class="menu-category">Additional Features</div>
 <div class="menu-item"><a href="mathjax.html">MathJax</a></div>
 <div class="menu-item"><a href="underscore.html">Underscore</a></div>
@@ -52,25 +53,52 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="http://www.google.com" target="blank">Open&nbsp;in&nbsp;New&nbsp;Tab</a></div>
 </td>
 <td id="layout-content">
-<table class="imgtable"><tr><td>
-<img src="./images/banner.jpg" alt="profile pic" width="100%" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<table class="imgtable"><tr><td>
-<img src="./images/profile.jpg" alt="profile pic" width="200px" />&nbsp;</td>
-<td align="left"><h1>Lorem Ipsum <br /></h1>
-<p>dolor sit amet, <a href="http://www-ee.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a><br />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div id="toptitle">
+<h1>jemdoc &ndash; tables</h1>
+</div>
+<p>jemdoc includes preliminary support for tables.</p>
+<div class="codeblock">
+<div class="blocktitle">Table syntax</div>
+<div class="blockcontent"><pre>
+~~~
+{}{table}{TABLENAME}
+first entry  | another entry ||
+as many rows | as you like   ||
+bottom row   | last entry
+~~~
+</pre></div></div>
+<p><tt>TABLENAME</tt> should either be replaced with a name&#8201;&mdash;&#8201;which becomes the table's
+<tt>css</tt> <tt>id</tt>&#8201;&mdash;&#8201;or be omitted.</p>
+<h2>Notes</h2>
+<ul>
+<li><p>There is no need to line up the <tt>|</tt> symbols. Extra whitespace is ignored.</p>
+</li>
+<li><p>The last row does not need a terminating <tt>||</tt>.</p>
+</li>
+<li><p>Individual tables can be customised by replacing <tt>TABLENAME</tt> with a unique
+name, and using custom css. For example, within
+a css file, <tt>#countries { background: gray; }</tt> will make the background of
+the <tt>countries</tt> table gray.</p>
+</li>
+<li><p>Rows in a table are numbered sequentially for easy formatting with css. For
+example, to make the entries in the first row of a table called <tt>countries</tt>
+bold, use <tt>#countries tr.r1 { font-weight: bold; }</tt>.</p>
+</li>
+</ul>
+<h2>Example</h2>
+<table id="countries">
+<tr class="r1"><td class="c1">country </td><td class="c2"> population </td><td class="c3"> people per square km </td></tr>
+<tr class="r2"><td class="c1">Canada </td><td class="c2"> 33 million </td><td class="c3"> 3.2 </td></tr>
+<tr class="r3"><td class="c1">
+<span lang="zh-Hans">中华人民共和国</span><br /> </td><td class="c2"> 1300 million </td><td class="c2"> 140 </td></tr>
+<tr class="r5"><td class="c1">Kingdom of Denmark </td><td class="c2"> 5.5 million </td><td class="c3"> 130 </td></tr>
+<tr class="r6"><td class="c1">New Zealand </td><td class="c2"> 4.3 million </td><td class="c3"> 15 </td></tr>
+<tr class="r7"><td class="c1">United States of America </td><td class="c2"> 300 million </td><td class="c3"> 31
 </td></tr></table>
-<h2>Biography</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2>Research statement</h2>
-<p>Pellentesque gravida metus purus, non blandit ligula dignissim a. Etiam vulputate nibh condimentum dui congue tempor. Vestibulum consequat non neque at tincidunt. Mauris accumsan a augue at consectetur. Praesent non nunc accumsan, feugiat nisl quis, ullamcorper est. Fusce a ex ornare libero venenatis tincidunt sed vel sem. Suspendisse id nibh at nisl pellentesque pellentesque non sit amet nisl.</p>
-<p>Cras convallis ex et felis ullamcorper, ut blandit velit efficitur. Nunc et ullamcorper lectus. Maecenas accumsan tortor volutpat dolor viverra lobortis. Duis elit justo, interdum vitae augue a, gravida lacinia nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in nulla eget magna vehicula vehicula quis id libero. Suspendisse elit sem, dignissim quis quam vitae, lacinia placerat nulla. Cras vehicula quis eros luctus condimentum. Pellentesque urna nunc, elementum ut mauris eu, pulvinar congue dui. Curabitur finibus egestas dolor vitae gravida. Integer venenatis, nisi sed iaculis tincidunt, tellus neque vehicula felis, sed viverra leo nunc at lorem. Curabitur in finibus purus. Aliquam dictum velit enim, sed vestibulum eros fringilla vitae. Donec tristique sapien dictum nisl pharetra dictum. Etiam non laoreet nisi, nec convallis quam. In commodo massa lacus, eget tincidunt odio elementum et.</p>
-<h2>Current Project</h2>
-<p>Donec tellus eros, rhoncus nec imperdiet in, tempus et mi. Quisque id feugiat enim. Suspendisse porta consequat velit, ac ullamcorper purus suscipit ac. Mauris laoreet varius urna. Suspendisse potenti. In et laoreet augue, et lobortis tellus. Etiam nec tortor tempus, lobortis turpis id, fermentum dolor. Mauris orci ante, porttitor ac viverra et, facilisis in lectus. Praesent faucibus non elit sit amet cursus. Duis eu viverra lectus, nec blandit magna. Nullam id ante semper, vestibulum neque tristique, accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis velit fermentum ex bibendum, eget molestie nisl porta.</p>
 <div id="footer">
 <div id="footer-text">
 last update of current page: 2020-04-13 00:33:03 PDT.
+(<a href="tables.jemdoc">source</a>)
 </div>
 </div>
 </td>

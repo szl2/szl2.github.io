@@ -11,11 +11,12 @@ table#tlayout {
 
 body {
 	background: #005587 url(./images/molecule-bg.png);
-	/*background: #005587;*/
+	/*background: #005587;*
   /*color: white;*/
 	/* background: white; */
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 0;
+	font-size: 16px;
 	margin: 0;
 }
 

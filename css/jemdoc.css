@@ -7,13 +7,13 @@ table#tlayout {
 	background: none;
 	height: calc(100vh - 230px);
 	/*background: white;*/
-	background: #8BB8E8 url(./images/molecule-bg.png);
+	background: #8BB8E8 url(../images/molecule-bg.png);
 }
 
 body {
 	/*background: #005587 url(./images/molecule-bg.png);*/
 	/*background: #005587;*/
-	background: #d1e8f8 url(./images/background.jpg) repeat;
+	background: #d1e8f8 url(../images/background.jpg) repeat;
   /*color: white;*/
 	/* background: white; */
 	font-family: Arial, Helvetica, sans-serif;

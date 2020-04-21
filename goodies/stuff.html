@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="css/jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="css/mysite_conf.css" type="text/css" />
+<title>jemdoc &ndash; vim, make</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<div class="config-header">
+	<div class="config-header box">
+    <a href="http://www.ee.ucla.edu"><img src="./images/common/ece_logo.png" alt="ece_logo.png" style="height:40px; padding:15px; padding-left:20px; "></a>
+		<!---<a href="http://www.math.ucla.edu"><img src="./images/common/math_logo.png" alt="math_logo.png" style="height:70px; padding:0px; padding-left:20px; "></a>--->
+	</div>
+</div>
+<div class="topnav" id="myTopnav">
+  <div class="topnav box">
+    <a href="../home/index.html">Home</a>
+    <a href="../jemdoc/download.html">Jemdoc</a>
+    <a href="../user_guide/using.html">User's guide</a>
+    <a href="../configuration/htmlchanges.html">Configuration</a>
+    <a href="./stuff.html" class="active">Goodies</a>
+    <a href="../additional_features/mathjax.html">Additional Features</a>
+    <a href="../blog/post1.html">Blog</a>
+    <!--- <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> --->
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<td id="layout-menu">
+<div class="menu-category">goodies</div>
+<div class="menu-item"><a href="stuff.html" class="current">vim,&nbsp;make</a></div>
+<div class="menu-item"><a href="latex.html">latex&nbsp;equations</a></div>
+<div class="menu-item"><a href="tables.html">tables</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>jemdoc &ndash; vim, make</h1>
+</div>
+<h2>Vim syntax highlighting</h2>
+<p>Here is a vim syntax file <a href="dist/jemdoc.vim"
+onclick="javascript:urchinTracker('/downloads/jemdoc.vim');">jemdoc.vim</a>.
+You should download it to
+<tt>~/.vim/syntax/</tt>. You may also need to add the following lines in your
+<tt>~/.vimrc</tt>:</p>
+<div class="codeblock">
+<div class="blocktitle">Additional <tt>~/.vimrc</tt> lines</div>
+<div class="blockcontent"><pre>
+filetype plugin on
+augroup filetypedetect
+	au! BufNewFile,BufRead *.jemdoc setf jemdoc
+augroup END
+
+" Last line is for proper wrapping of jemdoc lists, etc.
+autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
+</pre></div></div>
+<h2>Makefile</h2>
+<p>Here's a small example of a <a href="dist/Makefile"
+onclick="javascript:urchinTracker('/downloads/Makefile');">Makefile</a>.
+A listing of it follows.</p>
+<p>This file would be used as follows:</p>
+<ul>
+<li><p>Edit <tt>index.jemdoc</tt> and <tt>otherpage.jemdoc</tt> at will.</p>
+</li>
+<li><p>Type <tt>make</tt> in the same directory, and files <tt>html/index.html</tt> and
+<tt>html/otherpage.html</tt> will be updated as necessary.</p>
+</li>
+<li><p>Type <tt>make update</tt> and your files will be copied to the server.</p>
+</li>
+<li><p>Type <tt>make clean</tt> and old <tt>html</tt> files in <tt>html/</tt> will be removed.</p>
+</li>
+</ul>
+<p>Rinse and repeat.</p>
+<div class="codeblock">
+<div class="blocktitle">Makefile example</div>
+<div class="blockcontent"><pre>
+DOCS=index otherpage
+
+HDOCS=$(addsuffix .html, $(DOCS))
+PHDOCS=$(addprefix html/, $(HDOCS))
+
+.PHONY : docs
+docs : $(PHDOCS)
+
+.PHONY : update
+update : $(PHDOCS)
+	@echo -n 'Copying to server...'
+	# insert code for copying to server here.
+	@echo ' done.'
+
+html/%.html : %.jemdoc MENU
+	jemdoc -o $@ $&lt;
+
+.PHONY : clean
+clean :
+	-rm -f html/*.html
+</pre></div></div>
+<div id="footer">
+<div id="footer-text">
+last update of current page: 2020-04-20 20:37:53 PDT.
+</div>
+</div>
+</td>
+</table>
+<div class="config-footer">
+	<div class="config-footer box">
+    <a href="https://samueli.ucla.edu/engineerchange/">
+      <img src="./images/common/engchange_logo.png" alt="engchange_logo.png" style="height:30px; margin-top:25px; margin-bottom: 10px; margin-left: 20px; ">
+    </a>
+    <div class="config-footer box box-text">
+      <div style="padding-bottom: 30px;">
+        Copyright &copy; Zhiying Li.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        Powered by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        The background design of the page is borrowed from <a href="https://www.pic.ucla.edu" target="blank">UCLA Program in Computing</a>.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        The web design is borrowed from  <a href="http://brand.ucla.edu/identity/colors" target="blank">UCLA Brand Guidelines</a> and <a href="https://samueli.ucla.edu/style-guide/" target="blank">Style Guide | UCLA Samueli School Of Engineering</a>.
+      </div>
+    </div>
+	</div>
+</div>
+</body>
+</html>

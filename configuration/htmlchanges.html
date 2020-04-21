@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="css/jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="css/mysite_conf.css" type="text/css" />
+<title>jemdoc &ndash; html changes</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<div class="config-header">
+	<div class="config-header box">
+    <a href="http://www.ee.ucla.edu"><img src="./images/common/ece_logo.png" alt="ece_logo.png" style="height:40px; padding:15px; padding-left:20px; "></a>
+		<!---<a href="http://www.math.ucla.edu"><img src="./images/common/math_logo.png" alt="math_logo.png" style="height:70px; padding:0px; padding-left:20px; "></a>--->
+	</div>
+</div>
+<div class="topnav" id="myTopnav">
+  <div class="topnav box">
+    <a href="../home/index.html">Home</a>
+    <a href="../jemdoc/download.html">Jemdoc</a>
+    <a href="../user_guide/using.html">User's guide</a>
+    <a href="./htmlchanges.html" class="active">Configuration</a>
+    <a href="../goodies/stuff.html">Goodies</a>
+    <a href="../additional_features/mathjax.html">Additional Features</a>
+    <a href="../blog/post1.html">Blog</a>
+    <!--- <div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> --->
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<td id="layout-menu">
+<div class="menu-category">configuration</div>
+<div class="menu-item"><a href="htmlchanges.html" class="current">html&nbsp;changes</a></div>
+<div class="menu-item"><a href="menu.html">adding&nbsp;a&nbsp;menu</a></div>
+<div class="menu-item"><a href="modelines.html">modelines</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>jemdoc &ndash; html changes</h1>
+</div>
+<p>jemdoc has a built-in default configuration. This configuration includes the
+particular html tags used when producing html. If you wish to adjust the html
+that jemdoc produces, you can provide a configuration file to override the
+built-in defaults.</p>
+<h2>Example html change</h2>
+<p>Suppose you wanted to add <a href="http://www.google.com/analytics/" target=&ldquo;blank&rdquo;>Google
+Analytics</a> tracking to your website. That requires adding a short section of
+html before the <tt>&lt;/body&gt;</tt> tag.</p>
+<p>First, find out which block needs to be changed by using</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc --show-config
+</pre></div></div>
+<p>This prints the default html configuration. From this, the relevant
+configuration block (the one which includes the <tt>&lt;/body&gt;</tt> tag) has a title
+<tt>[bodyend]</tt>, and looks like</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+[bodyend]
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+<p>Create a new file <tt>mysite.conf</tt>, say, and put a new <tt>[bodyend]</tt> block
+inside it. The new file looks like this:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+[bodyend]
+&lt;script src="http://www.google-analytics.com/urchin.js" type="text/javascript"&gt;
+&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+_uacct = "UA-0000000-0";
+urchinTracker();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div></div>
+<p>Include your new configuration file, with the <tt>-c</tt> option (<a href="using.html" target=&ldquo;blank&rdquo;>more
+details here</a>):</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc -c mysite.conf index.jemdoc
+</pre></div></div>
+<p>This will pull in the new <tt>[bodyend]</tt> block from <tt>mysite.conf</tt>, but otherwise
+work as before.</p>
+<div id="footer">
+<div id="footer-text">
+last update of current page: 2020-04-20 20:37:52 PDT.
+</div>
+</div>
+</td>
+</table>
+<div class="config-footer">
+	<div class="config-footer box">
+    <a href="https://samueli.ucla.edu/engineerchange/">
+      <img src="./images/common/engchange_logo.png" alt="engchange_logo.png" style="height:30px; margin-top:25px; margin-bottom: 10px; margin-left: 20px; ">
+    </a>
+    <div class="config-footer box box-text">
+      <div style="padding-bottom: 30px;">
+        Copyright &copy; Zhiying Li.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        Powered by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        The background design of the page is borrowed from <a href="https://www.pic.ucla.edu" target="blank">UCLA Program in Computing</a>.
+        &nbsp; &nbsp; | &nbsp; &nbsp;
+        The web design is borrowed from  <a href="http://brand.ucla.edu/identity/colors" target="blank">UCLA Brand Guidelines</a> and <a href="https://samueli.ucla.edu/style-guide/" target="blank">Style Guide | UCLA Samueli School Of Engineering</a>.
+      </div>
+    </div>
+	</div>
+</div>
+</body>
+</html>

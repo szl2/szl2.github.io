@@ -58,7 +58,7 @@ body {
 }
 
 tt {
-	background: #f0f2f4;
+	background: #f3f5f7;
 	color: black;
 }
 
@@ -66,8 +66,8 @@ pre, tt {
 	padding: 5px;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	font-size: 90%;
-	font-family: 'Lucida Console', Monaco, monospace;
+	font-size: 87.5%;
+	font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	border-radius: 5px;
 	line-height: 1.5;
 }
@@ -77,7 +77,7 @@ a, a > tt {
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, a:hover > tt{
 	/*border-bottom: 1.25px #0366d6 dashed;*/
 	color: #ea4aaa;
 }
@@ -141,8 +141,6 @@ strong {
 
 
 h1, h2, h3 {
-	margin-top: 0.7em;
-	margin-bottom: 0.3em;
 	padding-bottom: 0.2em;
 	line-height: 1.25;
 	padding-top: 0.5em;
@@ -151,20 +149,23 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 32px;
 }
 
 h2 {
 	padding-top: 0.8em;
-	font-size: 32px;
+	margin-bottom: 16px;
+	font-size: 24px;
 }
 
 h2 + h3 {
-	padding-top: 0.2em;
+	padding-top: 4px;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 20px;
+	padding-top: 0px;
+	margin-bottom: 0px;
 	border-bottom: none;
 }
 
@@ -264,7 +265,7 @@ div.codeblock, div.infoblock {
 
 div.blocktitle {
 	color: #0366d6;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 2;
 }
 

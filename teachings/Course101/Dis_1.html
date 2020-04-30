@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="table.css" type="text/css" />
+<title>Discussion 1 (Spring 2020)</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<div style="width: max(100%, 1180.78px);  height: 70px; background: #24292e;">
+	<div style="padding-left: 20px; padding-top: 8px;">
+		<div style="height:45px; width:45px; display:inline-block; vertical-align: middle; background-color: white; border-radius: 10px;">
+	    <a href="index.html"><img src="./images/profile1.jpg" alt="" style="width: 100%; height: 100%; position: center; padding:0px; margin: 0px;"></a>
+		</div>
+		<a href="index.html"><div style="padding-left: 10px; height: 40px; width:500px; display:inline-block; color: white; font-size: 28px; margin: 5px; display:inline-block; vertical-align: middle; padding-top: 8px">
+	    Course 101 (Spring 2020)
+		</div></a>
+	</div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Discussion Notes</div>
+<div class="menu-item"><a href="Dis_1.html" class="current">Week&nbsp;1</a></div>
+<div class="menu-item"><a href="Dis_2.html">Week&nbsp;2</a></div>
+<div class="menu-item"><a href="Dis_3.html">Week&nbsp;3</a></div>
+<div class="menu-category">Office Hours Notes</div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Discussion 1 (Spring 2020)</h1>
+<div id="subtitle">2020-03-01</div>
+</div>
+<h2>Problem 1 (Model for an autocatalytic reaction &ndash; from Strogatz)</h2>
+<p>A chemical species \(A\) combines with a species \(X\) to form two molecules of \(X\). This means that the chemical \(X\) is involved in its own production, a process that chemists call <i> autocatalysis </i>. However, the reaction is reversible: two molecules of \(X\) can also combine and disassociate back into \(X\) and \(A\). We represent this reaction by the chemical equation:</p>
+<p>
+<div style="text-align: center; padding: 0px; margin: 0px;">
+<a href="index.html"><img src="./images/dis1/eq1.svg" alt="" style="height: 55px; padding: 0px; margin: 0px;"></a>
+</div>
+
+Here, \(k_f\) and \(k_b\) are the rate constants for the forward reaction and for the backward reaction, respectively. Assume that there is a very large surplus of the chemical \(A\), so that we can treat the concentration of \(A\) as a constant: \([A]=a\).</p>
+<p><b>(a)</b> Use the mass-action laws to write down a differential equation for \(x(t)\), the concentration of \(X\) in the reaction.</p>
+<p><div style="color: blue;"></p>
+<p><i> <b>Solution. </b> </i></p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\text{rate of change of [X]}
+&amp;=
+\left(\begin{array}{c}
+\text{rate at which X is produced}\\
+\text{ by } A+X \rightarrow 2X
+\end{array}\right)
+-
+\left(\begin{array}{c}
+\text{rate at which X is consumed}\\
+\text{ by } 2X \rightarrow A+X
+\end{array}\right)
+\\
+&amp;\implies \quad \dfrac{dx}{dt} = k_f ax - k_b x^2
+\end{aligned}
+\]
+</p><p></div></p>
+<p><b>(b)</b> Find the fixed points and evaluate their stability using a vector field plot. Explain what the stability of the fixed points is telling you about the behavior of the biological system.</p>
+<p><div style="color: blue;"></p>
+<p><i> <b>Solution. </b> </i>
+Set \(\dfrac{dx}{dt} = 0\), we have,</p>
+<p style="text-align:center">
+\[
+k_f ax - k_b x^2 = x(k_f a - k_b x) = 0 \quad \implies \quad x = 0 \ (\text{unstable}) \ \text{or} \ x = \dfrac{k_f a}{k_b} \ (\text{stable})
+\]
+</p><p>The vector plot is as follow:</p>
+<p>
+<div style="text-align: center; padding: 0px; margin: 0px;">
+<img src="./images/dis1/p1b.png" alt="" style="width: 500px; padding: 0px; margin: 0px;">
+</div>
+</p>
+<p></div></p>
+<p><b>(c)</b> Sketch solutions \(x(t)\) for various initial values \(x_0\). Include inflections in your graphs of \(x(t)\) where they occur.</p>
+<p><div style="color: blue;"></p>
+<p><i> <b>Solution. </b> </i></p>
+<p>
+<div style="text-align: center; padding: 0px; margin: 0px;">
+<img src="./images/dis1/p1c.png" alt="" style="width: 450px; padding: 0px; margin: 0px;">
+</div>
+</p>
+<p></div></p>
+<h2>Problem 2 (Nondimensionalization)</h2>
+<p>The following model describes the outbreak of the spruce budworm:</p>
+<p style="text-align:center">
+\[
+\dfrac{dP}{dt} = kP\left(1-\dfrac{P}{N}\right) - \dfrac{BP^2}{A^2+P^2}, \quad P(0) = P_0.
+\]
+</p><p><b>(a)</b> Specify the dimensions of all variables and parameters in the model.</p>
+<p><div style="color: blue;"></p>
+<p><i> <b>Solution. </b> </i></p>
+<table id="countries">
+<tr class="r1"><td class="c1">Variable </td><td class="c2"> Dimension    </td><td class="c3"> Parameter   </td><td class="c4"> Dimension</td></tr>
+<tr class="r3"><td class="c1">\(P\)      </td><td class="c2"> population   </td><td class="c3"> \(k\)         </td><td class="c4"> \(\dfrac{1}{\text{time}}\)  </td></tr>
+<tr class="r4"><td class="c1">\(t\)      </td><td class="c2"> time         </td><td class="c3"> \(N\)         </td><td class="c4"> population</td></tr>
+<tr class="r6"><td class="c1"></td><td class="c2">              </td><td class="c3"> \(A\)         </td><td class="c4"> population                </td></tr>
+<tr class="r7"><td class="c1"></td><td class="c2">              </td><td class="c3"> \(B\)         </td><td class="c4"> \(\dfrac{\text{population}}{\text{time}}\)
+</td></tr></table>
+<p></div></p>
+<p><b>(b)</b> Show that the model can be rewritten in the dimensionless form</p>
+<p style="text-align:center">
+\[
+\dfrac{du}{ds} = \alpha u \left(1-\dfrac{u}{\beta}\right) - \dfrac{u^2}{1+u^2}, \quad u(0) = \gamma,
+\]
+</p><p>and specify all dimensionless variables and parameters.</p>
+<p><div style="color: blue;"></p>
+<p><i> <b>Solution. </b> </i></p>
+<p>Let's scale \(P\) by \(A\). Then,</p>
+<p style="text-align:center">
+\[
+P = uA \ \implies \ u = \dfrac{P}{A}.
+\]
+</p><p>Therefore, we can rewrite the original equation as:</p>
+<p style="text-align:center">
+\[
+\begin{align*}
+\dfrac{dP}{dt} &amp;= kP\left(1-\dfrac{P}{N}\right) - \dfrac{BP^2}{A^2+P^2} \\
+\dfrac{d}{dt} (uA) &amp;= kuA\left(1-\dfrac{uA}{N}\right) - \dfrac{B(uA)^2}{A^2+(uA)^2} \\
+A\dfrac{du}{dt} &amp;= Aku\left(1-\dfrac{u}{N/A}\right) - B \dfrac{u^2}{1+u^2} \\
+\dfrac{A}{B}\dfrac{du}{dt} &amp;= \dfrac{Ak}{B}u\left(1-\dfrac{u}{N/A}\right) -  \dfrac{u^2}{1+u^2} .
+\end{align*}
+\]
+</p><p>Now we want the LHS to have the form of \(\dfrac{du}{ds}\). Then</p>
+<p style="text-align:center">
+\[
+\dfrac{A}{B}\dfrac{du}{dt}  = \dfrac{du}{ds} \ \implies \
+\dfrac{A}{B}\dfrac{du}{dt}  = \dfrac{dt}{ds}\dfrac{du}{dt}  \ \implies \
+\dfrac{A}{B} = \dfrac{dt}{ds} \ \implies \
+t = \dfrac{A}{B} s \ \implies \
+s = \dfrac{B}{A} t
+\]
+</p><p>As for the initial condition, we have:</p>
+<p style="text-align:center">
+\[
+u(0) = \gamma \ \implies \ \dfrac{P_0}{A} = \gamma
+\]
+</p><p>Therefore, if we parametrize the original equation with the following dimensionless variables:</p>
+<p style="text-align:center">
+\[
+u = \dfrac{P}{A}, \ \
+s = \dfrac{B}{A} t , \ \
+\gamma = \dfrac{P_0}{A} , \ \
+\alpha = \dfrac{Ak}{B}, \ \
+\beta = \dfrac{N}{A},
+\]
+</p><p>we will have</p>
+<p style="text-align:center">
+\[
+\dfrac{du}{ds} = \alpha u \left(1-\dfrac{u}{\beta}\right) - \dfrac{u^2}{1+u^2}, \quad u(0) = \gamma.
+\]
+</p><p></div></p>
+<div id="footer">
+<div id="footer-text">
+Copyright &copy; Zhiying Li.
+Powered by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Last update of current page: 2020-04-30 12:49:36 PDT.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

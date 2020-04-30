@@ -393,10 +393,15 @@ img {
 
 table.imgtable, table.imgtable td {
 	text-align: justify;
-	vertical-align: top;
+	vertical-align: center;
 	border: none;
 	padding: 0px;
 	border-spacing: 0px;
+}
+
+table.imgtable h1{
+	border-bottom: none;
+	margin-bottom: 0px;
 }
 
 table.imgtable h2{

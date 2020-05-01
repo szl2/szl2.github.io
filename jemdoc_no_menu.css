@@ -2,6 +2,9 @@
 
 #layout-content {
 	margin: auto;
-	width: 1050px;
-	min-width: 650px;
+	width: 850px;
+}
+
+div#banner {
+	width: max(940px, 100%);
 }

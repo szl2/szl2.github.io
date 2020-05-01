@@ -424,3 +424,10 @@ table.imgtable h2 + table.imgtable h3{
 
 table.imgtable p{
 }
+
+
+div#banner {
+	width: max(100%, 1180.78px);
+	height: 70px;
+	background: #24292e;
+}

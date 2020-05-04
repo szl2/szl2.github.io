@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="icon" href="./images/icon.png">
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<!--- <title></title> --->
+<!--- <title>jemdoc &ndash; add a menu</title> --->
 <title>Lorem Ipsum</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
@@ -38,7 +38,7 @@ MathJax.Hub.Config({
 <div id="layout-menu-container">
 <div id="layout-menu">
 <div class="menu-item"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-category">Jemdoc</div>
 <div class="menu-item"><a href="download.html">download</a></div>
 <div class="menu-item"><a href="revision.html">version/bug&nbsp;info</a></div>
@@ -50,7 +50,7 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="extra.html">extra&nbsp;syntax</a></div>
 <div class="menu-category">Configuration</div>
 <div class="menu-item"><a href="htmlchanges.html">html&nbsp;changes</a></div>
-<div class="menu-item"><a href="menu.html">adding&nbsp;a&nbsp;menu</a></div>
+<div class="menu-item"><a href="menu.html" class="current">adding&nbsp;a&nbsp;menu</a></div>
 <div class="menu-item"><a href="modelines.html">modelines</a></div>
 <div class="menu-category">Goodies</div>
 <div class="menu-item"><a href="stuff.html">vim,&nbsp;make</a></div>
@@ -71,22 +71,49 @@ MathJax.Hub.Config({
 </div>
 <div id="layout-content-container">
 <div id="layout-content">
-<div id="text-img-container"><div id="img-container">
-<img src="./images/banner.jpg" alt="profile pic" width="100%" /></div>
-<div id="text-container"></div></div>
-<div id="text-img-container"><div id="img-container">
-<img src="./images/profile.png" alt="profile pic" width="200px" height="200px" /></div>
-<div id="text-container"><h1>Lorem Ipsum <br /></h1>
-<p>dolor sit amet, <a href="http://www-ee.stanford.edu/" target=&ldquo;blank&rdquo;>Department of Electrical Engineering</a><br />
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div></div>
-<h2>Biography</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2>Research statement</h2>
-<p>Pellentesque gravida metus purus, non blandit ligula dignissim a. Etiam vulputate nibh condimentum dui congue tempor. Vestibulum consequat non neque at tincidunt. Mauris accumsan a augue at consectetur. Praesent non nunc accumsan, feugiat nisl quis, ullamcorper est. Fusce a ex ornare libero venenatis tincidunt sed vel sem. Suspendisse id nibh at nisl pellentesque pellentesque non sit amet nisl.</p>
-<p>Cras convallis ex et felis ullamcorper, ut blandit velit efficitur. Nunc et ullamcorper lectus. Maecenas accumsan tortor volutpat dolor viverra lobortis. Duis elit justo, interdum vitae augue a, gravida lacinia nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in nulla eget magna vehicula vehicula quis id libero. Suspendisse elit sem, dignissim quis quam vitae, lacinia placerat nulla. Cras vehicula quis eros luctus condimentum. Pellentesque urna nunc, elementum ut mauris eu, pulvinar congue dui. Curabitur finibus egestas dolor vitae gravida. Integer venenatis, nisi sed iaculis tincidunt, tellus neque vehicula felis, sed viverra leo nunc at lorem. Curabitur in finibus purus. Aliquam dictum velit enim, sed vestibulum eros fringilla vitae. Donec tristique sapien dictum nisl pharetra dictum. Etiam non laoreet nisi, nec convallis quam. In commodo massa lacus, eget tincidunt odio elementum et.</p>
-<h2>Current Project</h2>
-<p>Donec tellus eros, rhoncus nec imperdiet in, tempus et mi. Quisque id feugiat enim. Suspendisse porta consequat velit, ac ullamcorper purus suscipit ac. Mauris laoreet varius urna. Suspendisse potenti. In et laoreet augue, et lobortis tellus. Etiam nec tortor tempus, lobortis turpis id, fermentum dolor. Mauris orci ante, porttitor ac viverra et, facilisis in lectus. Praesent faucibus non elit sit amet cursus. Duis eu viverra lectus, nec blandit magna. Nullam id ante semper, vestibulum neque tristique, accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam mollis velit fermentum ex bibendum, eget molestie nisl porta.</p>
+<div id="toptitle">
+<h1>jemdoc &ndash; add a menu</h1>
+</div>
+<p>jemdoc provides an easy way to add a &lsquo;menu&rsquo; like the one you see at the left of
+this page. You should create a file called <tt>MENU</tt>, for example, in the current
+directory. This website's <tt>MENU</tt> looks something like this:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+jemdoc
+    home                [index.html]
+    download            [download.html]
+    revision history    [revision.html]
+    contact             [contact.html]
+
+user's guide
+    cheat sheet         [cheatsheet.html]
+    using               [using.html]
+
+goodies
+    add a menu          [menu.html]
+    other stuff         [stuff.html]
+</pre></div></div>
+<p>To use the menu, start the first line of <i>each</i> source file with a special
+comment like this one:</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# jemdoc: menu{MENU}{index.html}
+</pre></div></div>
+<p>(Replace <tt>index.html</tt> with the name of the relevant html page.) This will add a
+menu from the file called <tt>MENU</tt>, and underline and darken the menu entry
+corresponding to <tt>index.html</tt>.</p>
+<h2>Relative paths</h2>
+<p>Optionally, include a <tt>prefix</tt> which instructs jemdoc where the root of the menu
+is located relative to a particular page.</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# jemdoc: menu{MENU}{pageinsubdir.html}{prefix}
+</pre></div></div>
+<h2>A note on menu widths</h2>
+<p>jemdoc will create menu entries that do not wrap. If you have a particularly
+long title, or menu item, insert manual linebreaks using <tt>\</tt><tt>n</tt> in your
+MENU file. Multi-line menu items will (by default) have their second and
+subsequent lines slightly indented.</p>
 <div id="footer">
 <div id="footer-text">
 Last edited  on 2020-05-04 00:38:19 PDT. </br>

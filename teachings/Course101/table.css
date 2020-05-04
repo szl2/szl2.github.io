@@ -2,7 +2,11 @@
     font-weight: 600;
 }
 
-#countries tr:nth-child(even) {background-color: #f6f8fa;}
+
+#countries tr.r3, #countries tr.r6{
+    background: #f6f8fa;
+}
+
 
 #members td{
 	border: none;

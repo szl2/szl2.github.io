@@ -29,6 +29,40 @@ div#header {
 	display:inline-block;
 }
 
+div#header-icon-text-container {
+	padding-left: 20px;
+	padding-top: 8px;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+div#header-icon-container {
+	height:45px; width:45px;
+	display:inline-block;
+	vertical-align: middle;
+	background-color: white;
+	border-radius: 10px;
+}
+
+div#header-text-container {
+	padding-left: 10px;
+	height: 40px;
+	display:inline-block;
+	color: white;
+	font-size: 28px;
+	margin: 5px;
+	vertical-align: middle;
+	padding-top: 8px;
+}
+
+div#header-text-container a{
+	color: white;
+}
+
+div#header-text-container a:hover{
+	color: white;
+}
+
 div#layout {
 	width: 100vw;
 	min-height: calc(100vh - 70px);
@@ -465,6 +499,13 @@ div#text-container p{
 }
 
 
+div#main{
+	margin: auto;
+	height:45px;
+	display:inline-block;
+	vertical-align: middle;
+	padding-left: calc(100vw - 150px);
+}
 
 .openbtn {
   font-size: 0;
@@ -490,6 +531,11 @@ div#layout-menu-container .closebtn:hover {
 
 /* Width to collapse sidebar */
 @media screen and (max-width: 1200px) {
+	div#header-text-container {
+		visibility: hidden;
+		width: 0;
+	}
+
 	div#layout-menu-container{
 		width:0;
 	}

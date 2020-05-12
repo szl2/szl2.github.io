@@ -94,6 +94,7 @@ div#layout-menu {
 
 div#layout-content-container {
 	width: calc(100vw - 280.8px);
+	min-height: calc(100vh - 70px);
 	margin-left: 280.8px;
 	background: none;
 	text-align: left;
@@ -101,6 +102,7 @@ div#layout-content-container {
 }
 
 div#layout-content{
+	min-height: calc(100vh - 240px);
 	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-left: 35px;
@@ -237,14 +239,29 @@ pre {
 	margin: 0;
 }
 
+
+
+div#footer-container{
+}
+
 div#footer {
 	font-size: small;
-	padding-top: 40px;
 	color: #c0c0c0;
+	min-width: 200px;
+	max-width: 850px;
+	margin: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
 }
 
 div#footer a {
 	color: #80a0b0;
+}
+
+div#footer a:hover {
+	color: #ea4aaa;
 }
 
 div#footer-text {

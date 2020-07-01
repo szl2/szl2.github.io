@@ -25,6 +25,7 @@ div#header {
 	width: 100vw;
 	height: 70px;
 	background: #24292e;
+	z-index: 1;
 	position: fixed;
 	display:inline-block;
 }
@@ -521,7 +522,6 @@ div#main{
 	height:45px;
 	display:inline-block;
 	vertical-align: middle;
-	padding-left: calc(100vw - 150px);
 }
 
 .openbtn {
@@ -571,6 +571,9 @@ div#layout-menu-container .closebtn:hover {
 		margin-left:0px;
 		width: 100%;
 	}
+	div#main{
+		padding-left: calc(100vw - 150px);
+	}
 
 	.openbtn {
 	  font-size: 26px;
@@ -619,6 +622,17 @@ div#layout-menu-container .closebtn:hover {
 	}
 
 	div#layout-content{
+		padding-left:   20px;
+		padding-right:  20px;
+		padding-top:    16px;
+		padding-bottom: 15px;
+		min-height: calc(100vh - 190px);
+	}
+
+	div#footer-container{
+	}
+
+	div#footer {
 		padding-left:   20px;
 		padding-right:  20px;
 		padding-top:    16px;

@@ -488,12 +488,15 @@ div#text-container h1{
 
 div#text-container h2{
 	border-bottom: none;
+	font-size: 18px;
+	font-weight: bold;
 	margin: 0px;
 	padding: 0px;
 	padding-top: 15px;
 }
 
 div#text-container h3{
+	font-size: 16px;
 	padding-top: 0px;
 	margin-top: 0px;
 }

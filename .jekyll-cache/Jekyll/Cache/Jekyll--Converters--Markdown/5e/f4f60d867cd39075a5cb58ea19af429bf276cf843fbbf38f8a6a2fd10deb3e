@@ -1,0 +1,67 @@
+I"Ÿ<!-- _pages/publications.md -->
+<div class="publications">
+  <h2 class="year">2022</h2>
+  <ol class="bibliography"><li><!-- _layouts/bib.html -->
+      <div class="card hoverable">
+      <div class="row">
+
+
+
+
+
+          <div class="col-sm-3"><div class=" teaser">
+                  <figure>
+
+  <picture>
+    <source media="(max-width: 480px)" srcset="/assets/img/pub_img/skinProfiler-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/pub_img/skinProfiler-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/pub_img/skinProfiler-1400.webp" />
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1 medium-zoom-image" src="/assets/img/pub_img/skinProfiler.png" data-zoomable="" />
+
+  </picture>
+
+</figure>
+
+              </div></div>
+
+        <!-- Entry bib key -->
+        <div id="10.1145/3539494.3542757" class="col-sm-9"><div class="abbr"><abbr class="badge">workshop</abbr><abbr class="award badge">Best Paper</abbr></div>
+          <!-- Title -->
+          <div class="title">SkinProfiler: Low-Cost 3D Scanner for Skin Health Monitoring with Mobile Devices</div>
+          <!-- Author -->
+          <div class="author">
+                  <em>Zhiying Li</em>,&nbsp;<a href="https://www.linkedin.com/in/tejasviswa/">Tejas Viswanath</a>,&nbsp;<a href="https://twitter.com/YyyZihan">Zihan Yan</a>,&nbsp;and <a href="https://yangzhang.dev/">Yang Zhang</a>
+                  
+          </div>
+
+          <!-- Journal/Book title and date -->
+          <div class="periodical">
+            <em>In Proceedings of the 2022 Workshop on Emerging Devices for Digital Biomarkers</em> 2022
+          </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button"><i class="fa fa-eye"></i> Abstract</a>
+            <a href="https://doi.org/10.1145/3539494.3542757" class="btn btn-sm z-depth-0" role="button"><i class="fas fa-link"></i> doi</a>
+            <a href="/assets/pdf/SkinProfiler.pdf" class="btn btn-sm z-depth-0" role="button"><i class="fa fa-file-pdf-o"></i> PDF</a>
+          </div>
+
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Melanoma is one of the top three most common skin cancers, originating from skin lesions and moles. Keeping track of skin lesion and mole developments in a precise and long-term manner has long been recommended but overlooked for the lack of accurate and easy-to-access tools. In response, we develop SkinProfiler, a low-cost mobile profiling tool for long-term skin health monitoring. To use SkinProfiler, users clamp an LED ring accessory onto smartphone cameras and take photos of the skin region of interest using the SkinProfiler app. Our modified photometric stereo algorithm leverages 17 photos taken with the skin surface lightened under various conditions to reconstruct 3D models of the skin surfaces. Our system stores 3D information for skin lesion and mole monitoring and diagnosis. The total cost of hardware assembly is under 20 dollars. We ran a preliminary evaluation to verify the performance of our tool. Based on the results, we propose several future steps including evaluations in clinical settings to complete this research.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+</li></ol>
+
+  <h2 class="year">2021</h2>
+  <ol class="bibliography"></ol>
+
+  <h2 class="year">2020</h2>
+  <ol class="bibliography"></ol>
+
+
+</div>
+:ET
